@@ -8,9 +8,13 @@ function createTitle () {
 };
 
 function createCircle () {
+  const getPallete = document.getElementById('pallete')
   const createDiv = document.createElement('div');
   createDiv.style.width = '50px';
   createDiv.style.height = '50px';
+  createDiv.style.border = 'solid 1px black'
+  createDiv.style.borderRadius = '50%'
+  getPallete.appendChild(createDiv);
   return createDiv;
 }
 
