@@ -14,16 +14,26 @@ function createCircle () {
     const createDiv = document.createElement('div');
     createDiv.style.width = '50px';
     createDiv.style.height = '50px';
-    createDiv.style.border = 'solid 1px black'
-    createDiv.style.borderRadius = '50%'
+    createDiv.style.border = 'solid 1px black';
+    createDiv.style.borderRadius = '50%';
+    createDiv.className = 'colourPallete';
     getPallete.appendChild(createDiv);
     
   }
   return getPallete;
 }
 
+//rgb(12, 19, 136)
+
+function createRandomColour () {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 // chamada das funções
 
 createTitle();
-console.log(createCircle());
+createCircle();
+console.log(createRandomColour());
