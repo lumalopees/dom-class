@@ -35,9 +35,10 @@ function createRandomColour () {
 // Exemplo arrow function
 
 const paintCircles = () => {
-  const getColourPalette = document.getElementsByClassName('colourPalette');
-  for (let index = 0; index < getColourPalette.length; index += 1) {
-    console.log(getColourPalette[index]);    
+  const getColourPallete = document.getElementsByClassName('colourPallete');
+  for (let index = 0; index < getColourPallete.length; index += 1) {
+    getColourPallete[index].style.backgroundColor = createRandomColour();
+    
   }
 }
 
