@@ -32,8 +32,18 @@ function createRandomColour () {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Exemplo arrow function
+
+const paintCircles = () => {
+  const getColourPalette = document.getElementsByClassName('colourPalette');
+  for (let index = 0; index < getColourPalette.length; index += 1) {
+    console.log(getColourPalette[index]);    
+  }
+}
+
 // chamada das funções
 
 createTitle();
 createCircle();
-console.log(createRandomColour());
+createRandomColour();
+paintCircles();
