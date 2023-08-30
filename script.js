@@ -46,12 +46,12 @@ const paintCircles = () => {
   }
 }
 
-function showRGBColour (params) {
+function showRGBColour () {
   const getResult = document.getElementById('result');
-  const getGuess = document.querySelector('.guess');
+  const getGuess = document.querySelector('.guess').style.backgroundColor;
 
   const creatH1 = document.createElement('h1');
-  creatH1.innerHTML = 'Eai turma 27';
+  creatH1.innerHTML = getGuess;
   getResult.appendChild(creatH1);
 }
 
