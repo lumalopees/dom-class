@@ -1,3 +1,7 @@
+// variáveis globais
+
+const getResult = document.getElementById('result');
+
 // funções
 
 function createTitle () {
@@ -9,6 +13,7 @@ function createTitle () {
 
 function createCircle () {
   const getPallete = document.getElementById('pallete')
+  getPallete.style.display = 'flex'
   const randomClass = Math.floor(Math.random() * 8)
   
   for (let index = 0; index < 8; index += 1) {
@@ -18,6 +23,7 @@ function createCircle () {
     createDiv.style.border = 'solid 1px black';
     createDiv.style.borderRadius = '50%';
     createDiv.className = 'colourPallete';
+    createDiv.style.marginLeft = '1rem';
     if (index === randomClass) {
       createDiv.className = 'colourPallete guess'
     }
@@ -47,12 +53,15 @@ const paintCircles = () => {
 }
 
 function showRGBColour () {
-  const getResult = document.getElementById('result');
   const getGuess = document.querySelector('.guess').style.backgroundColor;
 
   const creatH1 = document.createElement('h1');
   creatH1.innerHTML = getGuess;
   getResult.appendChild(creatH1);
+}
+
+function createScore () {
+  console.log(getResult);
 }
 
 // chamada das funções
@@ -62,3 +71,4 @@ createCircle();
 createRandomColour();
 paintCircles();
 showRGBColour();
+createScore();
