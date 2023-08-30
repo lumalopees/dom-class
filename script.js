@@ -46,6 +46,10 @@ const paintCircles = () => {
   }
 }
 
+function showRGBColour (params) {
+  const getResult = document.getElementById('result')
+}
+
 // chamada das funções
 
 createTitle();
