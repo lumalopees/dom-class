@@ -9,6 +9,7 @@ function createTitle () {
 
 function createCircle () {
   const getPallete = document.getElementById('pallete')
+  const randomClass = Math.floor(Math.random() * 8)
   
   for (let index = 0; index < 8; index += 1) {
     const createDiv = document.createElement('div');
@@ -17,6 +18,9 @@ function createCircle () {
     createDiv.style.border = 'solid 1px black';
     createDiv.style.borderRadius = '50%';
     createDiv.className = 'colourPallete';
+    if (index === randomClass) {
+      console.log(index);
+    }
     getPallete.appendChild(createDiv);
     
   }
