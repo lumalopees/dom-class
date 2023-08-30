@@ -19,7 +19,7 @@ function createCircle () {
     createDiv.style.borderRadius = '50%';
     createDiv.className = 'colourPallete';
     if (index === randomClass) {
-      console.log(index);
+      createDiv.className = 'colourPallete guess'
     }
     getPallete.appendChild(createDiv);
     
