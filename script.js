@@ -47,7 +47,12 @@ const paintCircles = () => {
 }
 
 function showRGBColour (params) {
-  const getResult = document.getElementById('result')
+  const getResult = document.getElementById('result');
+  const getGuess = document.querySelector('.guess');
+
+  const creatH1 = document.createElement('h1');
+  creatH1.innerHTML = 'Eai turma 27';
+  getResult.appendChild(creatH1);
 }
 
 // chamada das funções
@@ -56,3 +61,4 @@ createTitle();
 createCircle();
 createRandomColour();
 paintCircles();
+showRGBColour();
