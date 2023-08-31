@@ -61,7 +61,11 @@ function showRGBColour () {
 }
 
 function createScore () {
-  console.log(getResult);
+  const createDiv = document.createElement('div');
+  const createH2 = document.createElement('h2');
+  createH2.innerHTML = 'Alguma coisa';
+  createDiv.appendChild(createH2);
+  getResult.appendChild(createDiv);
 }
 
 // chamada das funções
