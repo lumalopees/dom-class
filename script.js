@@ -62,10 +62,22 @@ function showRGBColour () {
 
 function createScore () {
   const createDiv = document.createElement('div');
+  createDiv.className = 'score';
   const createH2 = document.createElement('h2');
-  createH2.innerHTML = 'Alguma coisa';
+  createH2.innerHTML = 0;
+  createH2.className = 'valor';
   createDiv.appendChild(createH2);
   getResult.appendChild(createDiv);
+}
+
+function createEventListener () {
+  const getCircles = document.querySelectorAll('.colourPallete')
+  for (let index = 0; index < getCircles.length; index += 1) {
+    getCircles[index].addEventListener('click', () => {
+      alert('oi');
+    });
+    
+  }
 }
 
 // chamada das funções
@@ -76,3 +88,4 @@ createRandomColour();
 paintCircles();
 showRGBColour();
 createScore();
+createEventListener();
