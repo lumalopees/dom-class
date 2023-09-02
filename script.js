@@ -71,6 +71,7 @@ function createScore () {
 }
 
 function createEventListener () {
+  const getGuess = document.querySelector('.guess')
   const getCircles = document.querySelectorAll('.colourPallete')
   for (let index = 0; index < getCircles.length; index += 1) {
     getCircles[index].addEventListener('click', () => {
