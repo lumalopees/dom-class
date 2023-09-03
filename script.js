@@ -1,6 +1,7 @@
 // variáveis globais
 
 const getResult = document.getElementById('result');
+let score = 0;
 
 // funções
 
@@ -75,8 +76,8 @@ function updateColours () {
   const getCircles = document.querySelectorAll('.colourPallete');
   const getResultsx = document.getElementById('result');
 
-  console.log(getResultsx.childNodes);
-  getResultsx.removeChild(getResultsx.childNodes[0]);
+  // console.log(getResultsx.childNodes);
+  // getResultsx.removeChild(getResultsx.childNodes[0]);
   // getResultsx.removeChild(getResultsx.childNodes[0]);
 
   for (let index = 0; index < getCircles.length; index += 1) {
@@ -85,6 +86,8 @@ function updateColours () {
   createCircle();
   paintCircles();
   showRGBColour();
+  createScore();
+  createEventListener();
   console.log(getPallete.removeChild());
 }
 
@@ -92,7 +95,6 @@ function createEventListener () {
   const getGuess = document.querySelector('.guess')
   const getCircles = document.querySelectorAll('.colourPallete')
   const getH2 = document.querySelector('.valor');
-  let score = 0;
 
   for (let index = 0; index < getCircles.length; index += 1) {
     getCircles[index].addEventListener('click', () => {
