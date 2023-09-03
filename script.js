@@ -73,6 +73,11 @@ function createScore () {
 function updateColours () {
   const getPallete = document.getElementById('pallete');
   const getCircles = document.querySelectorAll('.colourPallete');
+  const getResultsx = document.getElementById('result');
+
+  console.log(getResultsx.childNodes);
+  getResultsx.removeChild(getResultsx.childNodes[0]);
+  // getResultsx.removeChild(getResultsx.childNodes[0]);
 
   for (let index = 0; index < getCircles.length; index += 1) {
     getPallete.removeChild(getCircles[index])    
@@ -93,6 +98,7 @@ function createEventListener () {
     getCircles[index].addEventListener('click', () => {
       if(getCircles[index].className.includes('guess')) {
         getH2.innerHTML = score += 1;
+        updateColours();
       }
     });
     
@@ -108,4 +114,3 @@ paintCircles();
 showRGBColour();
 createScore();
 createEventListener();
-updateColours();
