@@ -72,6 +72,15 @@ function createScore () {
 
 function updateColours () {
   const getPallete = document.getElementById('pallete');
+  const getCircles = document.querySelectorAll('.colourPallete');
+
+  for (let index = 0; index < getCircles.length; index += 1) {
+    getPallete.removeChild(getCircles[index])    
+  }
+  createCircle();
+  paintCircles();
+  showRGBColour();
+  console.log(getPallete.removeChild());
 }
 
 function createEventListener () {
