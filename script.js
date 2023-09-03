@@ -75,7 +75,7 @@ function createEventListener () {
   const getCircles = document.querySelectorAll('.colourPallete')
   for (let index = 0; index < getCircles.length; index += 1) {
     getCircles[index].addEventListener('click', () => {
-      alert('oi');
+      console.log(getCircles[index].className.includes('guess'));;
     });
     
   }
