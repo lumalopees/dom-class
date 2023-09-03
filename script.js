@@ -65,7 +65,7 @@ function createScore () {
   const createDiv = document.createElement('div');
   createDiv.className = 'score';
   const createH2 = document.createElement('h2');
-  createH2.innerHTML = 0;
+  createH2.innerHTML = score;
   createH2.className = 'valor';
   createDiv.appendChild(createH2);
   getResult.appendChild(createDiv);
@@ -77,8 +77,8 @@ function updateColours () {
   const getResultsx = document.getElementById('result');
 
   // console.log(getResultsx.childNodes);
-  // getResultsx.removeChild(getResultsx.childNodes[0]);
-  // getResultsx.removeChild(getResultsx.childNodes[0]);
+  getResultsx.removeChild(getResultsx.childNodes[0]);
+  getResultsx.removeChild(getResultsx.childNodes[0]);
 
   for (let index = 0; index < getCircles.length; index += 1) {
     getPallete.removeChild(getCircles[index])    
@@ -101,6 +101,8 @@ function createEventListener () {
       if(getCircles[index].className.includes('guess')) {
         getH2.innerHTML = score += 1;
         updateColours();
+      }else{
+        getH2.innerHTML = score = 0;
       }
     });
     
